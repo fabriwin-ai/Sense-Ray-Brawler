@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SENSE RAY</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<main class="popup-shell">
+  <header class="brand-row">
+    <div class="brand-mark" aria-hidden="true">SR</div>
+    <div><p class="eyebrow">RAY CONTROL SYSTEM</p><h1>SENSE RAY</h1></div>
+    <span id="status-dot" class="status-dot" aria-hidden="true"></span>
+  </header>
+
+  <section class="status-card" aria-live="polite">
+    <span id="status-label">Checking overlay…</span>
+    <small id="status-detail">Webcam gaze · on-device</small>
+  </section>
+
+  <section class="preset-section">
+    <div class="section-heading"><h2>RAY PRESET</h2><span>SELECT STYLE</span></div>
+    <div class="preset-list" role="group" aria-label="Ray presets">
+      <button class="preset-card" data-preset="brawler"><span class="preset-swatch swatch-brawler"></span><span><b>BRAWLER</b><small>Arcade · bold</small></span><span class="preset-check">✓</span></button>
+      <button class="preset-card" data-preset="sense"><span class="preset-swatch swatch-sense"></span><span><b>SENSE</b><small>Balanced · classic</small></span><span class="preset-check">✓</span></button>
+      <button class="preset-card" data-preset="precision"><span class="preset-swatch swatch-precision"></span><span><b>PRECISION</b><small>Steady · compact</small></span><span class="preset-check">✓</span></button>
+      <button class="preset-card" data-preset="phantom"><span class="preset-swatch swatch-phantom"></span><span><b>PHANTOM</b><small>Minimal · subtle</small></span><span class="preset-check">✓</span></button>
+    </div>
+  </section>
+
+  <div id="popup-message" class="popup-message" role="status"></div>
+  <footer class="actions">
+    <button id="open" class="button-primary"><span aria-hidden="true">↗</span> OPEN OVERLAY</button>
+    <button id="close" class="button-quiet">CLOSE</button>
+  </footer>
+</main>
+<script src="../ray-presets.js" defer></script>
+<script src="popup.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+:root{color-scheme:dark;--bg:#070a12;--panel:#101725;--line:#223042;--mint:#56f4c0;--gold:#f8cb61;--muted:#91a1b5;--text:#eaf3f7}
+*{box-sizing:border-box}
+body{width:340px;margin:0;background:radial-gradient(ellipse at 12% 0%,#14253a 0%,var(--bg) 55%);color:var(--text);font:13px/1.4 "Segoe UI",Arial,sans-serif}
+button{font:inherit;color:inherit;cursor:pointer}
+.popup-shell{padding:18px}
+.brand-row{display:flex;align-items:center;gap:11px;margin-bottom:15px}
+.brand-mark{display:grid;place-items:center;width:40px;height:40px;border:1px solid #56f4c077;border-radius:13px;background:#56f4c011;color:var(--mint);font-weight:800;letter-spacing:-1px;box-shadow:0 0 24px #56f4c01c}
+.eyebrow{margin:0 0 2px;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:1.8px}
+h1{margin:0;font-size:18px;letter-spacing:1.7px}
+.status-dot{margin-left:auto;width:9px;height:9px;border-radius:50%;background:#77869a;box-shadow:0 0 0 4px #77869a1d}
+.status-dot.active{background:var(--mint);box-shadow:0 0 12px var(--mint),0 0 0 4px #56f4c01d}
+.status-card{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;margin-bottom:17px;border:1px solid var(--line);border-radius:11px;background:#0c121d}
+.status-card span{font-weight:700;font-size:12px}
+.status-card small{color:var(--muted);font-size:10px}
+.section-heading{display:flex;align-items:center;justify-content:space-between;margin:0 1px 8px}
+.section-heading h2{margin:0;color:var(--gold);font-size:10px;letter-spacing:1.5px}
+.section-heading span{color:#64768c;font-size:9px;letter-spacing:1px}
+.preset-list{display:grid;gap:7px}
+.preset-card{display:flex;align-items:center;gap:10px;width:100%;padding:9px 10px;text-align:left;border:1px solid var(--line);border-radius:10px;background:linear-gradient(110deg,#111a28,#0c121d);transition:border-color .15s,background .15s,transform .15s}
+.preset-card:hover{transform:translateY(-1px);border-color:#52677c}
+.preset-card.selected{border-color:var(--preset-color,var(--mint));background:linear-gradient(110deg,#152238,#0d1522);box-shadow:inset 0 0 18px color-mix(in srgb,var(--preset-color,var(--mint)) 8%,transparent)}
+.preset-swatch{width:20px;height:20px;flex:0 0 20px;border:2px solid currentColor;border-radius:50%;box-shadow:0 0 11px currentColor,inset 0 0 5px currentColor}
+.preset-card b{display:block;font-size:11px;letter-spacing:1px}
+.preset-card small{display:block;margin-top:2px;color:var(--muted);font-size:10px}
+.preset-check{display:none;margin-left:auto;color:var(--preset-color,var(--mint));font-size:14px;font-weight:800}
+.preset-card.selected .preset-check{display:block}
+.preset-card[data-preset="brawler"]{--preset-color:#ff365d}.swatch-brawler{color:#ff365d}
+.preset-card[data-preset="sense"]{--preset-color:#56f4c0}.swatch-sense{color:#56f4c0}
+.preset-card[data-preset="precision"]{--preset-color:#58d9ff}.swatch-precision{color:#58d9ff}
+.preset-card[data-preset="phantom"]{--preset-color:#bd8cff}.swatch-phantom{color:#bd8cff}
+.popup-message{min-height:16px;margin:8px 2px 5px;color:#ffcf72;font-size:10px}
+.actions{display:flex;gap:8px;padding-top:8px;border-top:1px solid #1b2938}
+.actions button{height:36px;border-radius:9px;font-size:10px;font-weight:800;letter-spacing:1px}
+.button-primary{flex:1;border:1px solid #56f4c088;background:linear-gradient(110deg,#56f4c022,#56f4c00b);color:var(--mint)}
+.button-primary:hover{background:#56f4c02c}
+.button-quiet{padding:0 14px;border:1px solid var(--line);background:#101725;color:#a9b7c5}
+.button-quiet:hover{border-color:#64768c;color:var(--text)}
